@@ -5,8 +5,28 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:SimpleCalculator"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="200" Width="300">
     <Grid>
-        
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="80"/>
+            <ColumnDefinition Width="10"/>
+            <ColumnDefinition Width="80"/>
+            <ColumnDefinition Width="10"/>
+            <ColumnDefinition Width="80"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="10"/>
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <TextBox x:Name="textNum1" Grid.Column="1" Grid.Row="1" TextWrapping="Wrap" Text=""/>
+        <TextBox x:Name="textNum2" Grid.Column="3" Grid.Row="1" TextWrapping="Wrap" Text=""/>
+        <Button x:Name="btnCalc" Grid.Column="5" Content="Calculate" Grid.Row="1" Click="btnCalc_Click"/>
+        <TextBlock x:Name="tbResult" Grid.Column="3" Grid.Row="3" TextWrapping="Wrap" Text="TextBlock"/>
+
     </Grid>
 </Window>

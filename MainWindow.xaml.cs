@@ -23,6 +23,24 @@ namespace SimpleCalculator
         public MainWindow()
         {
             InitializeComponent();
+            textNum1.Focus();
+        }
+
+        private void btnCalc_Click(object sender, RoutedEventArgs e)
+        {
+            int a, b,sum;
+            try
+            {
+                a = int.Parse(textNum1.Text);
+                b = int.Parse(textNum2.Text);
+                sum = a + b;
+                tbResult.Text=a.ToString()+"+"+b.ToString()+"="+sum.ToString();
+            }
+            catch (Exception)
+            {
+
+                MessageBox.Show("You should give numbers");
+            }
         }
     }
 }
