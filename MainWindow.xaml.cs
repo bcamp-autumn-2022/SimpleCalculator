@@ -36,10 +36,11 @@ namespace SimpleCalculator
                 sum = a + b;
                 tbResult.Text=a.ToString()+"+"+b.ToString()+"="+sum.ToString();
             }
-            catch (Exception)
+            catch (Exception ex)
             {
 
-                MessageBox.Show("You should give numbers");
+                //MessageBox.Show("You should give numbers");
+                MessageBox.Show(ex.Message);
             }
         }
     }
